@@ -1,4 +1,4 @@
-# Calculator-modules
+# Calculator
 ## 1.Introduction: 
   This Calculator will be constructed by several parts: Mixed computing, integration, derivative, sum, prod, non-elementary function, trignomatric, matrix. Due to time constraints, we may not be able to update all the modules listed in the near future. 
 ## 2.Details:
