@@ -21,8 +21,4 @@ dataType GetTop(LinkStack *s);
 int priority(char x);
 double compute(double x, double y, char op);
 
-double Gamma(double x);
-double DecimalFactorial(double x);
-double Beta(double p,double q);
-
 #endif
