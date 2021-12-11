@@ -7,3 +7,5 @@ You can use Dev C++ to open the whole project. Run the code to get the value for
 ### Part 2: Integral:
 We use the trapezoid method to get the integral value for certain kinds of function. But the antiderivative we didn't realize. It is constructed by different kinds of notations, which is vary hard to realize by C language.
 ### Part 3: Matrix:
+By running this modules, we can get the transpose of matrix and the multiplication of the matrix. First, we need to imput the dimension of the matrix, and we input the value to the first matrix.Also, we input the second matrix in the same method. Then, we choose the calculation we need to do later
+
