@@ -3,12 +3,12 @@
 #include <string.h>
 #include<math.h>
 
-double value[100][100] ;
-double value2[100][100] ;
+double value[100];
+double value2[100];
 
 typedef struct
 {
-    int row,line;
+    int row,line;		//line为行,row为列
     double *data;
 }Matrix;
 
@@ -22,86 +22,68 @@ void PrintMatrix(Matrix *matrix);							//打印一个矩阵
 Matrix* AddMatrix(Matrix *matrix_A,Matrix *matrix_B);		//矩阵的加法
 Matrix* MulMatrix(Matrix *matrix_A,Matrix *matrix_B);		//矩阵的乘法
 void TransMatrix(Matrix *matrix);			                //矩阵转置(条件为方阵)
-double DerMatrix(Matrix *matrix);                             //矩阵的行列式
 
 int main()
 {
-    int m1,m2,n1,n2,n,m,l;
-    printf("Enter the number of matrix ( up to 2).\n");
-    scanf("%d",&n);
-    if (n == 1){
-        printf("input the value of row in matrix\n");
-        scanf("%d",&m1);
-        printf("input the value of line in matrix\n");
-        scanf("%d",&n1);
-        printf("input the value of matrix :\n");
-        for(int i = 0; i < m1; i++)
-        {
-            for(int j = 0; j < n1;j++){scanf("%lf",&value[i][j]);}
-        }
-        Matrix *matrix = InitMatrix(matrix,m1,n1);
-        printf("Enter your choice\n");
-        printf("1.Transformation\n");
-        scanf("%d",&m);
-
-
-        if( m == 1){
-            ValueMatrix(matrix,value);
-            printf("矩阵1进行转置: \n");
+    int m1,m2,n1,n2,t,e;
+    printf("The number of matrices you want to have computation\n");
+    scanf("%d",&t);
+    switch (t) {
+        case 1:
+            printf("input the value of row in matrix 1\n");
+            scanf("%d", &m1);
+            printf("input the value of line in matrix 1\n");
+            scanf("%d", &n1);
+            printf("input the value of matrix:\n");
+            for (int i = 0; i < m1*n1; i++) {
+                    scanf("%lf", &value[i]);
+            }
+            Matrix *matrix = InitMatrix(matrix, m1, n1);
+            ValueMatrix(matrix, value);
+            printf("So the transformation of this matrix is\n");
             TransMatrix(matrix);
             PrintMatrix(matrix);
-        }
+            break;
+        case 2:
+            printf("Choose a type of computation: 1.Plus 2.Multiple \n");
+            scanf("%d", &e);
+            printf("input the value of row in matrix 1\n");
+            scanf("%d", &m1);
+            printf("input the value of line in matrix 1\n");
+            scanf("%d", &n1);
+            printf("input the value of matrix1:\n");
+            for (int i = 0; i < m1*n1; i++) {
+                    scanf("%lf", &value[i]);
+            }
+            Matrix *matrix1 = InitMatrix(matrix1, m1, n1);
+            printf("input the value of row in matrix 2\n");
+            scanf("%d", &m2);
+            printf("input the value of line in matrix 2\n");
+            scanf("%d", &n2);
+            printf("input the value of matrix 2:\n");
+            for (int i = 0; i < m2*n2; i++) {
+                    scanf("%lf", &value2[i]);
+            }
+            Matrix *matrix2 = InitMatrix(matrix2, m2, n2);
+            switch (e) {
+                case 1:
+                    ValueMatrix(matrix1, value);
+                    ValueMatrix(matrix2, value2);
+                    printf("矩阵1 加上 矩阵2: \n");
+                    Matrix *matrix3 = AddMatrix(matrix1, matrix2);    //加法
+                    printf("The answer is\n");
+                    PrintMatrix(matrix3);
+                    break;
+                case 2:
+                    ValueMatrix(matrix1, value);
+                    ValueMatrix(matrix2, value2);
+                    printf("矩阵1 加上 矩阵2: \n");
+                    Matrix *matrix4 = MulMatrix(matrix1, matrix2);    //加法
+                    printf("The answer is\n");
+                    PrintMatrix(matrix4);
+                    break;
+            }
     }
-    else if(n == 2){
-        printf("input the value of row in matrix 1\n");
-        scanf("%d",&m1);
-        printf("input the value of line in matrix 1\n");
-        scanf("%d",&n1);
-        printf("input the value of matrix 1:\n");
-        for(int i = 0; i < m1; i++)
-        {
-            for(int j = 0; j < n1;j++){scanf("%lf",&value[i][j]);}
-        }
-        Matrix *matrix1 = InitMatrix(matrix1,m1,n1);
-
-        printf("input the value of row in matrix 2\n");
-        scanf("%d",&m2);
-        printf("input the value of line in matrix 2\n");
-        scanf("%d",&n2);
-        printf("input the value of matrix 2:\n");
-        for(int i = 0; i < m2; i++)
-        {
-            for(int j = 0; j < n2;j++){scanf("%lf",&value[i][j]);}
-        }
-        Matrix *matrix2 = InitMatrix(matrix2,m2,n2);
-        printf("Enter your choice\n");
-        printf("1.multiply\n 2.add\n");
-        scanf("%d",&l);
-        switch (l) {
-            case 1:
-                ValueMatrix(matrix1,value);
-                CopyMatrix(matrix1,matrix2);	//复制赋值
-                ValueMatrix(matrix2,value2);
-                printf("The multiply of matrix1 and matrix2 is : \n");
-                Matrix *matrix3 = MulMatrix(matrix1,matrix2);
-                PrintMatrix(matrix3);
-                break;
-            case 2:
-                ValueMatrix(matrix1,value);
-                CopyMatrix(matrix1,matrix2);	//复制赋值
-                ValueMatrix(matrix2,value2);
-                PrintMatrix(matrix2);
-                Matrix *matrix4 = AddMatrix(matrix1,matrix2);	//加法
-                PrintMatrix(matrix4);
-                break;
-        }
-
-    }
-
-
-
-
-
     return 0;
 }
 
@@ -170,7 +152,7 @@ Matrix* AddMatrix(Matrix *matrix_A,Matrix *matrix_B)
     }
     else
     {
-        printf("Error input\n");
+        printf("不可相加\n");
         return NULL;
     }
 }
@@ -198,7 +180,7 @@ Matrix* MulMatrix(Matrix *matrix_A,Matrix *matrix_B)
     }
     else
     {
-        printf("Error input\n");
+        printf("不可相乘\n");
         return NULL;
     }
 }
@@ -221,20 +203,12 @@ void TransMatrix(Matrix *matrix)			//条件为方阵
     }
     else
     {
-        printf("Error input\n");
+        printf("转置的矩阵必须为方阵\n");
     }
 }
 
-double DerMatrix(Matrix *matrix)
-{
-    for (int i = 0; i < matrix->row;i++ )
-    {
-        for (int j = 0; j < matrix->line;j++)
-        {
-            value[i][j] = value[i][j]/value[i][1];
 
-        }
-    }
-}
+
+
 
 
