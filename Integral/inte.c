@@ -45,89 +45,89 @@ void program() {
 	double a, b;
 	int index;
 	while (1) {
-		printf("ÇëÑ¡ÔñÒ»¸öÊı×Ö(º¯Êı)£º"); scanf("%d", &index);
+		printf("è¯·é€‰æ‹©ä¸€ä¸ªæ•°å­—(å‡½æ•°)ï¼š"); scanf("%d", &index);
 		switch (index) {
 		case 1:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, X));
 			break;
 		case 2:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, POW));
 			break;
 		case 3:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, SIN));
 			break;
 		case 4:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, COS));
 			break;
 		case 5:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, TAN));
 			break;
 		case 6:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, LOG));
 			break;
 		case 7:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, LNX));
 			break;
 		case 8:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, SEC));
 			break;
 		case 9:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, COT));
 			break;
 		case 10:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, ARCSIN));
 			break;
 		case 11:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, ARCCOS));
 			break;
 		case 12:
-			printf("ÇëÊäÈë»ı·ÖÏÂÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸‹é™ï¼š");
 			scanf("%lf", &a);
-			printf("ÇëÊäÈë»ı·ÖÉÏÏŞ£º");
+			printf("è¯·è¾“å…¥ç§¯åˆ†ä¸Šé™ï¼š");
 			scanf("%lf", &b);
 			printf("%f\n", Definite_integral(a, b, ARCTAN));
 			break;
@@ -135,23 +135,23 @@ void program() {
 			return;
 			break;
 		default:
-			printf("ÇëÔÙ´ÎÊäÈë:");
+			printf("è¯·å†æ¬¡è¾“å…¥:");
 			break;
 		}
 	}
 }
-/*ÌİĞÎ·¨*/ 
+/*æ¢¯å½¢æ³•*/ 
 double Definite_integral(double a, double b, double (*p)(double x)) {
 	int i, n = MAXN;
 	double x, y1, y2, deta, f;
-	deta = (b - a) / n;
+	deta = (b - a) / n;// the width of each trapezoid
 	x = a;
 	y1 = (*p)(x);
 	f = 0;
 	for (i = 0; i < n; i++) {
 		x += deta;
 		y2 = (*p)(x);
-		f += (y1 + y2) * deta / 2;
+		f += (y1 + y2) * deta / 2;//the sum of trapezoidal areas
 		y1 = y2;
 	}
 	return f;
