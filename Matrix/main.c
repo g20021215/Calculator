@@ -77,7 +77,7 @@ int main()
                 case 2:
                     ValueMatrix(matrix1, value);
                     ValueMatrix(matrix2, value2);
-                    printf("矩阵1 加上 矩阵2: \n");
+                    printf("矩阵1 乘 矩阵2: \n");
                     Matrix *matrix4 = MulMatrix(matrix1, matrix2);    //加法
                     printf("The answer is\n");
                     PrintMatrix(matrix4);
@@ -144,7 +144,7 @@ Matrix* AddMatrix(Matrix *matrix_A,Matrix *matrix_B)
         {
             for (int j=0;j<matrix_A->row;j++)
             {
-                matrix_C->data[i*matrix_C->row + i] = \
+                matrix_C->data[i*matrix_C->row + j] = \
 				matrix_A->data[i*matrix_A->row + j] + matrix_B->data[i*matrix_A->row + j];
             }
         }
