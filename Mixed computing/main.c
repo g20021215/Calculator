@@ -3,15 +3,15 @@
 #include<math.h> 
 #include "stack.h"
 //#include "basic_calculation.h"
-//#include "func.h"//ÒıÈë·Ç³õµÈº¯ÊıÄ£¿é 
+//#include "func.h"//å¼•å…¥éåˆç­‰å‡½æ•°æ¨¡å— 
 double Gamma(double x);
-//È«¾Ö±äÁ¿ÉùÃ÷ 
+//å…¨å±€å˜é‡å£°æ˜ 
 int main() {
 	//const double pi = 3.1415926535897932384626433;
 	char A;
 	char B;
-    //printf("ÇëÊäÈëÄú½«Òª½øĞĞµÄÔËËãÀàĞÍ\n");
-	printf("a:»ìºÏĞÍ(¼Óœp³Ë³ı»ìºÏÔËËã)\t q:ÍË³ö\n");
+    //printf("è¯·è¾“å…¥æ‚¨å°†è¦è¿›è¡Œçš„è¿ç®—ç±»å‹\n");
+	printf("a:æ··åˆå‹(åŠ æ¸›ä¹˜é™¤æ··åˆè¿ç®—)\t q:é€€å‡º\n");
 	do{
 		scanf("%c",&A);
 		char s2[500],op,t[1001];
@@ -21,7 +21,7 @@ int main() {
 		double p,q,s;
 			switch (A){
 				case 'a':
-					printf("ÇëÊäÈëËãÊ½(¿É°üº¬¼Ó¼õ³Ë³ı¼°À¨ºÅ):");
+					printf("è¯·è¾“å…¥ç®—å¼(å¯åŒ…å«åŠ å‡ä¹˜é™¤åŠæ‹¬å·):");
 		    		scanf("%s",t);
 		    		for (int i=0; i<strlen(t); i++) {
 		        		if (t[i]>='0' && t[i]<='9') {
@@ -65,7 +65,7 @@ int main() {
 				case 'q':
 					break;
 				default:
-					printf("Please inout the next formular\n");
+					printf("Please input the next formular\n");
 			}
 		}while(A != 'q'); 
 	//return 0; 
