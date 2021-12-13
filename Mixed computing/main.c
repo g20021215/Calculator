@@ -2,9 +2,6 @@
 #include <stdlib.h>
 #include<math.h> 
 #include "stack.h"
-//#include "basic_calculation.h"
-//#include "func.h"//引入非初等函数模块 
-double Gamma(double x);
 //全局变量声明 
 int main() {
 	//const double pi = 3.1415926535897932384626433;
