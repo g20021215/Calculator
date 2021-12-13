@@ -41,8 +41,7 @@ int priority(char x) {
         case '-':
         case '=': return 1;
         case '*':
-        case '/': 
-		case '^': return 2;
+        case '/': return 2;
         case '(': return 3;
     }
 }
@@ -52,6 +51,5 @@ double compute(double x, double y, char op) {
         case '-': return x - y;
         case '*': return x * y;
         case '/': return x / y;
-        case '^': return pow(1.0*x,1.0*y);
     }
 }                
